@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <update handle="loki_admin_components_form"/>
+
+    <head>
+        <title>YireoTraining Software Product Form</title>
+    </head>
+
+    <body>
+        <referenceContainer name="content">
+            <block
+                name="loki_admin_products.form"
+                template="Yireo_LokiAdminComponents::form.phtml">
+                <arguments>
+                    <argument name="data_provider" xsi:type="object">
+                        YireoTraining\ExampleLokiAdminProducts\Form\VirtualSoftwareProductTypeRepositoryProvider
+                    </argument>
+                </arguments>
+
+                <block
+                    name="loki_admin_products.form.inner" as="inner"
+                    template="Yireo_LokiAdminComponents::form/fieldset.phtml">
+                    <arguments>
+                        <argument name="label" xsi:type="string">Basic</argument>
+                    </arguments>
+
+                    <block
+                        name="loki_admin_products.form.product_id" as="product_id"
+                        template="Yireo_LokiAdminComponents::form/field.phtml">
+                        <arguments>
+                            <argument name="label" xsi:type="string">Product ID</argument>
+                            <argument name="field_type" xsi:type="string">text</argument>
+                            <argument name="required" xsi:type="boolean">true</argument>
+                        </arguments>
+                    </block>
+
+                    <block
+                        name="loki_admin_products.form.duration" as="duration"
+                        template="Yireo_LokiAdminComponents::form/field.phtml">
+                        <arguments>
+                            <argument name="label" xsi:type="string">Duration</argument>
+                            <argument name="field_type" xsi:type="string">text</argument>
+                            <argument name="required" xsi:type="boolean">true</argument>
+                        </arguments>
+                    </block>
+
+                    <block
+                        name="loki_admin_products.form.duration_unit" as="duration_unit"
+                        template="Yireo_LokiAdminComponents::form/field.phtml">
+                        <arguments>
+                            <argument name="label" xsi:type="string">Duration Unit</argument>
+                            <argument name="field_type" xsi:type="string">select</argument>
+                            <argument name="required" xsi:type="boolean">true</argument>
+                            <argument name="options" xsi:type="object">
+                                YireoTraining\ExampleLokiAdminProducts\Options\DurationUnitOptions
+                            </argument>
+                        </arguments>
+                    </block>
+
+                    <block
+                        name="loki_admin_products.form.composer_packages" as="composer_packages"
+                        template="Yireo_LokiAdminComponents::form/field.phtml">
+                        <arguments>
+                            <argument name="label" xsi:type="string">Composer Packages</argument>
+                            <argument name="field_type" xsi:type="string">select</argument>
+                            <argument name="required" xsi:type="boolean">true</argument>
+                            <argument name="options" xsi:type="object">
+                                YireoTraining\ExampleLokiAdminProducts\Options\ComposerPackageOptions
+                            </argument>
+                            <argument name="multiple" xsi:type="boolean">true</argument>
+                            <argument name="size" xsi:type="number">30</argument>
+                        </arguments>
+                    </block>
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:View/Layout:etc/page_configuration.xsd">
+    <update handle="loki_admin_components_grid"/>
+
+    <head>
+        <title>YireoTraining Software Product</title>
+    </head>
+
+    <body>
+        <referenceContainer name="content">
+            <block
+                name="loki_admin_products.grid"
+                template="Yireo_LokiAdminComponents::grid.phtml">
+                <arguments>
+                    <argument name="grid_name" xsi:type="string">loki_admin_products</argument>
+                    <argument name="data_provider" xsi:type="object">YireoTraining\ExampleLokiAdminProducts\Grid\VirtualSoftwareProductTypeRepositoryProvider</argument>
+                    <argument name="searchable_fields" xsi:type="array">
+                        <item name="name" xsi:type="string">name</item>
+                        <item name="description" xsi:type="string">description</item>
+                        <item name="short_description" xsi:type="string">short_description</item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+
+        <referenceBlock name="loki-admin.grid.actions">
+            <block name="add" template="Yireo_LokiAdminComponents::grid/actions/button-add.phtml">
+                <arguments>
+                    <argument name="title" xsi:type="string">Add Product</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>
