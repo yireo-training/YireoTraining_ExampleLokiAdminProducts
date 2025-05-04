@@ -12,9 +12,9 @@
                 name="loki_admin_products.form"
                 template="Yireo_LokiAdminComponents::form.phtml">
                 <arguments>
-                    <argument name="data_provider" xsi:type="object">
-                        YireoTraining\ExampleLokiAdminProducts\Form\VirtualSoftwareProductTypeRepositoryProvider
-                    </argument>
+                    <argument name="provider" xsi:type="string">Magento\Catalog\Api\ProductRepositoryInterface</argument>
+                    <argument name="provider_handler" xsi:type="string">repository</argument>
+                    <argument name="factory" xsi:type="string">Magento\Catalog\Api\Data\ProductInterfaceFactory</argument>
                 </arguments>
 
                 <block

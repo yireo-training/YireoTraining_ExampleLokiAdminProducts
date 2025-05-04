@@ -13,7 +13,8 @@
                 template="Yireo_LokiAdminComponents::grid.phtml">
                 <arguments>
                     <argument name="grid_name" xsi:type="string">loki_admin_products</argument>
-                    <argument name="data_provider" xsi:type="object">YireoTraining\ExampleLokiAdminProducts\Grid\VirtualSoftwareProductTypeRepositoryProvider</argument>
+                    <argument name="provider" xsi:type="string">Magento\Catalog\Api\ProductRepositoryInterface</argument>
+                    <argument name="provider_handler" xsi:type="string">repository</argument>
                     <argument name="searchable_fields" xsi:type="array">
                         <item name="name" xsi:type="string">name</item>
                         <item name="description" xsi:type="string">description</item>

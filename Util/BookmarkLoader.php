@@ -6,6 +6,7 @@ use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Ui\Api\BookmarkRepositoryInterface;
 use Magento\Ui\Api\Data\BookmarkInterface;
 
+// @todo: Move this to Yireo_LokiAdminComponents when ready
 class BookmarkLoader
 {
     public function __construct(

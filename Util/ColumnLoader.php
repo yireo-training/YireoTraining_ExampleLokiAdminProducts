@@ -2,6 +2,8 @@
 
 namespace YireoTraining\ExampleLokiAdminProducts\Util;
 
+// @todo: Move this to Yireo_LokiAdminComponents when ready
+
 class ColumnLoader
 {
     public function __construct(

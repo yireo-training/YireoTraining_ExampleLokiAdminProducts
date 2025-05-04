@@ -24,12 +24,12 @@ class GridViewModel extends OriginalGridViewModel
 
     public function getIndexUrl(): string
     {
-        return $this->urlFactory->create()->getUrl('softwareproducttype/index/grid');
+        return $this->urlFactory->create()->getUrl('loki_admin_products/index/grid');
     }
 
     public function getNewUrl(): string
     {
-        return $this->urlFactory->create()->getUrl('softwareproducttype/index/form');
+        return $this->urlFactory->create()->getUrl('loki_admin_products/index/form');
     }
 
     public function getColumns(): array
@@ -41,7 +41,13 @@ class GridViewModel extends OriginalGridViewModel
     {
         $cellActions = [];
 
-        $editUrl = $this->urlFactory->create()->getUrl('softwareproducttype/index/form', [
+        $editUrl = $this->urlFactory->create()->getUrl('loki_admin_products/index/form', [
+            'id' => $item->getId(),
+        ]);
+
+        $cellActions[] = $this->cellActionFactory->create($editUrl, 'Quick Edit');
+
+        $editUrl = $this->urlFactory->create()->getUrl('catalog/product/edit', [
             'id' => $item->getId(),
         ]);
 
