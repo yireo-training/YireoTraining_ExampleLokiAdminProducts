@@ -46,9 +46,9 @@ class Form extends Action
      */
     public function execute(): Page
     {
-        $title = __('Create YireoTraining Software Product');
+        $title = __('Create Product');
         if ($this->getRequest()->getParam('id')) {
-            $title = __('Edit YireoTraining Software Product');
+            $title = __('Edit Product');
         }
 
         /** @var Page $resultPage */

@@ -9,7 +9,7 @@ class FormViewModel extends OriginalFormViewModel
 {
     public function getIndexUrl(): string
     {
-        return $this->urlFactory->create()->getUrl('softwareproducttype/index/grid');
+        return $this->urlFactory->create()->getUrl('loki_admin_products/index/grid');
     }
 
     public function getFormActions(): array

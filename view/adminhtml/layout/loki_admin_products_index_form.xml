@@ -25,50 +25,52 @@
                     </arguments>
 
                     <block
-                        name="loki_admin_products.form.product_id" as="product_id"
+                        name="loki_admin_products.form.status" as="status"
                         template="Yireo_LokiAdminComponents::form/field.phtml">
                         <arguments>
-                            <argument name="label" xsi:type="string">Product ID</argument>
+                            <argument name="label" xsi:type="string">Enabled</argument>
+                            <argument name="field_type" xsi:type="string">switch</argument>
+                            <argument name="required" xsi:type="boolean">true</argument>
+                        </arguments>
+                    </block>
+
+                    <block
+                        name="loki_admin_products.form.name" as="name"
+                        template="Yireo_LokiAdminComponents::form/field.phtml">
+                        <arguments>
+                            <argument name="label" xsi:type="string">Product Name</argument>
                             <argument name="field_type" xsi:type="string">text</argument>
                             <argument name="required" xsi:type="boolean">true</argument>
                         </arguments>
                     </block>
 
                     <block
-                        name="loki_admin_products.form.duration" as="duration"
+                        name="loki_admin_products.form.sku" as="sku"
                         template="Yireo_LokiAdminComponents::form/field.phtml">
                         <arguments>
-                            <argument name="label" xsi:type="string">Duration</argument>
+                            <argument name="label" xsi:type="string">SKU</argument>
                             <argument name="field_type" xsi:type="string">text</argument>
                             <argument name="required" xsi:type="boolean">true</argument>
                         </arguments>
                     </block>
 
                     <block
-                        name="loki_admin_products.form.duration_unit" as="duration_unit"
+                        name="loki_admin_products.form.price" as="price"
                         template="Yireo_LokiAdminComponents::form/field.phtml">
                         <arguments>
-                            <argument name="label" xsi:type="string">Duration Unit</argument>
-                            <argument name="field_type" xsi:type="string">select</argument>
+                            <argument name="label" xsi:type="string">Price</argument>
+                            <argument name="field_type" xsi:type="string">text</argument>
                             <argument name="required" xsi:type="boolean">true</argument>
-                            <argument name="options" xsi:type="object">
-                                YireoTraining\ExampleLokiAdminProducts\Options\DurationUnitOptions
-                            </argument>
                         </arguments>
                     </block>
 
                     <block
-                        name="loki_admin_products.form.composer_packages" as="composer_packages"
+                        name="loki_admin_products.form.tax_class" as="tax_class"
                         template="Yireo_LokiAdminComponents::form/field.phtml">
                         <arguments>
-                            <argument name="label" xsi:type="string">Composer Packages</argument>
-                            <argument name="field_type" xsi:type="string">select</argument>
+                            <argument name="label" xsi:type="string">Tax Class</argument>
+                            <argument name="field_type" xsi:type="string">text</argument>
                             <argument name="required" xsi:type="boolean">true</argument>
-                            <argument name="options" xsi:type="object">
-                                YireoTraining\ExampleLokiAdminProducts\Options\ComposerPackageOptions
-                            </argument>
-                            <argument name="multiple" xsi:type="boolean">true</argument>
-                            <argument name="size" xsi:type="number">30</argument>
                         </arguments>
                     </block>
                 </block>
