@@ -5,6 +5,7 @@ namespace YireoTraining\ExampleLokiAdminProducts\Component\Grid;
 use Magento\Framework\DataObject;
 use Magento\Framework\UrlFactory;
 use Yireo\LokiAdminComponents\Component\Grid\GridViewModel as OriginalGridViewModel;
+use Yireo\LokiAdminComponents\Grid\Cell\CellAction;
 use Yireo\LokiAdminComponents\Grid\Cell\CellActionFactory;
 use Yireo\LokiAdminComponents\Grid\State;
 use Yireo\LokiComponents\Util\CamelCaseConvertor;
@@ -37,7 +38,16 @@ class GridViewModel extends OriginalGridViewModel
         return $this->columnLoader->getColumns();
     }
 
-    public function getCellActions(DataObject $item): array
+    public function getRowAction(DataObject $item): CellAction
+    {
+        $editUrl = $this->urlFactory->create()->getUrl('catalog/product/edit', [
+            'id' => $item->getId(),
+        ]);
+
+        return $this->cellActionFactory->create($editUrl, 'Edit');
+    }
+
+    protected function getAdditionalActions(DataObject $item): array
     {
         $cellActions = [];
 
@@ -46,12 +56,6 @@ class GridViewModel extends OriginalGridViewModel
         ]);
 
         $cellActions[] = $this->cellActionFactory->create($editUrl, 'Quick Edit');
-
-        $editUrl = $this->urlFactory->create()->getUrl('catalog/product/edit', [
-            'id' => $item->getId(),
-        ]);
-
-        $cellActions[] = $this->cellActionFactory->create($editUrl, 'Edit');
 
         return $cellActions;
     }
