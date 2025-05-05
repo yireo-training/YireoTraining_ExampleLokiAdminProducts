@@ -30,6 +30,10 @@ class ColumnLoader
 
         $columns = [];
         foreach ($bookmarkData['views']['default']['data']['columns'] as $columnName => $columnData) {
+            if ($columnName === 'actions') {
+                continue;
+            }
+
             if ((int)$columnData['visible'] === 1) {
                 $columns[] = [
                     'name' => $columnName,
