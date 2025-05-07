@@ -27,6 +27,16 @@ class GridViewModel extends OriginalGridViewModel
         return $this->cellActionFactory->create($editUrl, 'Edit');
     }
 
+    public function getSearchableFields(): array
+    {
+        // @todo: Replace this with automatic logic of product entity
+        return [
+            'name',
+            'description',
+            'short_description',
+        ];
+    }
+
     protected function getAdditionalActions(DataObject $item): array
     {
         $cellActions = [];
