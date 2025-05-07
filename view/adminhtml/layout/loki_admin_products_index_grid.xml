@@ -20,7 +20,7 @@
         </referenceContainer>
 
         <referenceBlock name="loki-admin.grid.actions">
-            <block name="add" template="Yireo_LokiAdminComponents::grid/actions/button-add.phtml">
+            <block name="add" template="Yireo_LokiAdminComponents::grid/action-buttons/button-add.phtml">
                 <arguments>
                     <argument name="title" xsi:type="string">Add Product</argument>
                 </arguments>
