@@ -1,0 +1,11 @@
+{
+    "modules": [
+        "Magento_Catalog"
+    ],
+    "components": [
+        "loki_admin_products.grid",
+        "loki_admin_products.form"
+    ],
+    "config": [],
+    "tests": []
+}
