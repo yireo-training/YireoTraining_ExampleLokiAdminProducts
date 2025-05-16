@@ -14,16 +14,9 @@
                 <arguments>
                     <argument name="namespace" xsi:type="string">product_listing</argument>
                     <argument name="provider" xsi:type="string">Magento\Catalog\Api\ProductRepositoryInterface</argument>
+                    <argument name="new_url" xsi:type="string">catalog/product/new</argument>
                 </arguments>
             </block>
         </referenceContainer>
-
-        <referenceBlock name="loki-admin.grid.actions">
-            <block name="add" template="Yireo_LokiAdminComponents::grid/action-buttons/button-add.phtml">
-                <arguments>
-                    <argument name="title" xsi:type="string">Add Product</argument>
-                </arguments>
-            </block>
-        </referenceBlock>
     </body>
 </page>

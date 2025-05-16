@@ -10,18 +10,6 @@ use Yireo\LokiAdminComponents\Grid\Cell\CellAction;
 class GridViewModel extends OriginalGridViewModel
 {
     #[Override]
-    public function getIndexUrl(): string
-    {
-        return $this->urlFactory->create()->getUrl('loki_admin_products/index/grid');
-    }
-
-    #[Override]
-    public function getNewUrl(): string
-    {
-        return $this->urlFactory->create()->getUrl('loki_admin_products/index/form');
-    }
-
-    #[Override]
     public function getRowAction(DataObject $item): CellAction
     {
         $editUrl = $this->urlFactory->create()->getUrl('catalog/product/edit', [
