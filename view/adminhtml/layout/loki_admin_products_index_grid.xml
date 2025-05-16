@@ -14,7 +14,6 @@
                 <arguments>
                     <argument name="namespace" xsi:type="string">product_listing</argument>
                     <argument name="provider" xsi:type="string">Magento\Catalog\Api\ProductRepositoryInterface</argument>
-                    <argument name="provider_handler" xsi:type="string">repository</argument>
                 </arguments>
             </block>
         </referenceContainer>
