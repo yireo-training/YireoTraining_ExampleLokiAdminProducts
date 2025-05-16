@@ -9,6 +9,7 @@ use Yireo\LokiAdminComponents\Grid\Cell\CellAction;
 
 class GridViewModel extends OriginalGridViewModel
 {
+
     #[Override]
     public function getRowAction(DataObject $item): CellAction
     {
@@ -27,6 +28,17 @@ class GridViewModel extends OriginalGridViewModel
             'description',
             'short_description',
         ];
+    }
+
+    #[Override]
+    public function getButtons(): array
+    {
+        $childButtons = [];
+        $childButtons[] = $this->buttonFactory->create('createSimpleProduct', 'Product Product');
+        $childButtons[] = $this->buttonFactory->create('createConfigurableProduct', 'Add Product');
+
+        $button = $this->buttonFactory->create('createSimpleProduct', 'Add Product', '', true, $childButtons);
+        return [$button];
     }
 
     #[Override]

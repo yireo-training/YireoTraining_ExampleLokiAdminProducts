@@ -3,6 +3,7 @@
     <component
         name="loki_admin_products.grid"
         viewModel="YireoTraining\ExampleLokiAdminProducts\Component\Grid\GridViewModel"
+        context="YireoTraining\ExampleLokiAdminProducts\Component\Grid\GridContext"
         repository="Yireo\LokiAdminComponents\Component\Grid\GridRepository">
     </component>
 
