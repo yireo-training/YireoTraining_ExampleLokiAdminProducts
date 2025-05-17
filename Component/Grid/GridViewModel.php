@@ -7,6 +7,9 @@ use Override;
 use Yireo\LokiAdminComponents\Component\Grid\GridViewModel as OriginalGridViewModel;
 use Yireo\LokiAdminComponents\Grid\Cell\CellAction;
 
+/**
+ * @method GridContext getContext()
+ */
 class GridViewModel extends OriginalGridViewModel
 {
 
@@ -33,11 +36,27 @@ class GridViewModel extends OriginalGridViewModel
     #[Override]
     public function getButtons(): array
     {
-        $childButtons = [];
-        $childButtons[] = $this->buttonFactory->create('createSimpleProduct', 'Product Product');
-        $childButtons[] = $this->buttonFactory->create('createConfigurableProduct', 'Add Product');
+        $subButtons = [];
+        $attributeSetId = $this->getContext()->getDefaultAttributeSetId();
 
-        $button = $this->buttonFactory->create('createSimpleProduct', 'Add Product', '', true, $childButtons);
+        foreach ($this->getContext()->getProductTypesConfig()->getAll() as $productType) {
+            $params = ['set' => $attributeSetId, 'type' => $productType['name']];
+            $url = $this->urlFactory->create()->getUrl('catalog/product/new', $params);
+            $subButtons[] = $this->buttonFactory->createLinkAction(
+                $url,
+                $productType['label']
+            );
+        }
+
+        $params = ['set' => $attributeSetId, 'type' => 'simple'];
+        $url = $this->urlFactory->create()->getUrl('catalog/product/new', $params);
+        $button = $this->buttonFactory->createLinkAction(
+            $url,
+            'Add Product',
+            subButtons: $subButtons,
+            primary: true
+        );
+
         return [$button];
     }
 
