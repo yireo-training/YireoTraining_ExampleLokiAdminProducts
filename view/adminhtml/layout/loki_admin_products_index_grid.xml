@@ -14,6 +14,7 @@
                 <arguments>
                     <argument name="namespace" xsi:type="string">product_listing</argument>
                     <argument name="provider" xsi:type="string">Magento\Catalog\Api\ProductRepositoryInterface</argument>
+                    <argument name="index_url" xsi:type="string">loki_admin_products/index/grid</argument>
                     <argument name="new_url" xsi:type="string">catalog/product/new</argument>
                     <argument name="mass_actions" xsi:type="array">
                         <item name="enable" xsi:type="object">YireoTraining\ExampleLokiAdminProducts\Grid\MassAction\EnableMassAction</item>
