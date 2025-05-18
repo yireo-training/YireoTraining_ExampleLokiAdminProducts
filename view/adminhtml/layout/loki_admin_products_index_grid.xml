@@ -15,6 +15,11 @@
                     <argument name="namespace" xsi:type="string">product_listing</argument>
                     <argument name="provider" xsi:type="string">Magento\Catalog\Api\ProductRepositoryInterface</argument>
                     <argument name="new_url" xsi:type="string">catalog/product/new</argument>
+                    <argument name="mass_actions" xsi:type="array">
+                        <item name="enable" xsi:type="object">YireoTraining\ExampleLokiAdminProducts\Grid\MassAction\EnableMassAction</item>
+                        <item name="disable" xsi:type="object">YireoTraining\ExampleLokiAdminProducts\Grid\MassAction\DisableMassAction</item>
+                        <item name="delete" xsi:type="object">YireoTraining\ExampleLokiAdminProducts\Grid\MassAction\DeleteMassAction</item>
+                    </argument>
                 </arguments>
             </block>
         </referenceContainer>
