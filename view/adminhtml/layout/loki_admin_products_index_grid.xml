@@ -21,6 +21,18 @@
                         <item name="disable" xsi:type="object">YireoTraining\ExampleLokiAdminProducts\Grid\MassAction\DisableMassAction</item>
                         <item name="delete" xsi:type="object">YireoTraining\ExampleLokiAdminProducts\Grid\MassAction\DeleteMassAction</item>
                     </argument>
+                    <argument name="grid_filters" xsi:type="array">
+                        <item name="id_range" xsi:type="array">
+                            <item name="label" xsi:type="string">ID</item>
+                            <item name="field_type" xsi:type="string">from_to</item>
+                        </item>
+                        <item name="store" xsi:type="array">
+                            <item name="label" xsi:type="string">Store View</item>
+                            <item name="caption" xsi:type="string">All Store Views</item>
+                            <item name="field_type" xsi:type="string">select</item>
+                            <item name="options" xsi:type="string">Magento\Store\Ui\Component\Listing\Column\Store\Options</item>
+                        </item>
+                    </argument>
                 </arguments>
             </block>
         </referenceContainer>
