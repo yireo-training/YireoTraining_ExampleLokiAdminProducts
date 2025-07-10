@@ -4,8 +4,8 @@ namespace YireoTraining\ExampleLokiAdminProducts\Component\Grid;
 
 use Magento\Framework\DataObject;
 use Override;
-use Yireo\LokiAdminComponents\Component\Grid\GridViewModel as OriginalGridViewModel;
-use Yireo\LokiAdminComponents\Grid\Cell\CellAction;
+use Loki\AdminComponents\Component\Grid\GridViewModel as OriginalGridViewModel;
+use Loki\AdminComponents\Grid\Cell\CellAction;
 
 /**
  * @method GridContext getContext()

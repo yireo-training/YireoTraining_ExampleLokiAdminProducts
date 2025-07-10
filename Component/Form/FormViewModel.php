@@ -3,7 +3,7 @@
 namespace YireoTraining\ExampleLokiAdminProducts\Component\Form;
 
 use Magento\Framework\DataObject;
-use Yireo\LokiAdminComponents\Component\Form\FormViewModel as OriginalFormViewModel;
+use Loki\AdminComponents\Component\Form\FormViewModel as OriginalFormViewModel;
 
 class FormViewModel extends OriginalFormViewModel
 {

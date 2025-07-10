@@ -2,7 +2,7 @@
 
 namespace YireoTraining\ExampleLokiAdminProducts\Grid\MassAction;
 
-use Yireo\LokiAdminComponents\Grid\MassAction\AbstractMassAction;
+use Loki\AdminComponents\Grid\MassAction\AbstractMassAction;
 
 class EnableMassAction extends AbstractMassAction
 {

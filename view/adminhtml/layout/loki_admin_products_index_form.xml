@@ -10,7 +10,7 @@
         <referenceContainer name="content">
             <block
                 name="loki_admin_products.form"
-                template="Yireo_LokiAdminComponents::form.phtml">
+                template="Loki_AdminComponents::form.phtml">
                 <arguments>
                     <argument name="provider" xsi:type="string">Magento\Catalog\Api\ProductRepositoryInterface</argument>
                     <argument name="provider_handler" xsi:type="string">repository</argument>
@@ -19,14 +19,14 @@
 
                 <block
                     name="loki_admin_products.form.inner" as="inner"
-                    template="Yireo_LokiAdminComponents::form/fieldset.phtml">
+                    template="Loki_AdminComponents::form/fieldset.phtml">
                     <arguments>
                         <argument name="label" xsi:type="string">Basic</argument>
                     </arguments>
 
                     <block
                         name="loki_admin_products.form.status" as="status"
-                        template="Yireo_LokiAdminComponents::form/field.phtml">
+                        template="Loki_AdminComponents::form/field.phtml">
                         <arguments>
                             <argument name="label" xsi:type="string">Enabled</argument>
                             <argument name="field_type" xsi:type="string">switch</argument>
@@ -36,7 +36,7 @@
 
                     <block
                         name="loki_admin_products.form.name" as="name"
-                        template="Yireo_LokiAdminComponents::form/field.phtml">
+                        template="Loki_AdminComponents::form/field.phtml">
                         <arguments>
                             <argument name="label" xsi:type="string">Product Name</argument>
                             <argument name="field_type" xsi:type="string">text</argument>
@@ -46,7 +46,7 @@
 
                     <block
                         name="loki_admin_products.form.sku" as="sku"
-                        template="Yireo_LokiAdminComponents::form/field.phtml">
+                        template="Loki_AdminComponents::form/field.phtml">
                         <arguments>
                             <argument name="label" xsi:type="string">SKU</argument>
                             <argument name="field_type" xsi:type="string">text</argument>
@@ -56,7 +56,7 @@
 
                     <block
                         name="loki_admin_products.form.price" as="price"
-                        template="Yireo_LokiAdminComponents::form/field.phtml">
+                        template="Loki_AdminComponents::form/field.phtml">
                         <arguments>
                             <argument name="label" xsi:type="string">Price</argument>
                             <argument name="field_type" xsi:type="string">text</argument>
@@ -66,7 +66,7 @@
 
                     <block
                         name="loki_admin_products.form.tax_class" as="tax_class"
-                        template="Yireo_LokiAdminComponents::form/field.phtml">
+                        template="Loki_AdminComponents::form/field.phtml">
                         <arguments>
                             <argument name="label" xsi:type="string">Tax Class</argument>
                             <argument name="field_type" xsi:type="string">text</argument>

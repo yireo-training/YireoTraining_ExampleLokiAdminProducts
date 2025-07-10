@@ -4,12 +4,12 @@
         name="loki_admin_products.grid"
         viewModel="YireoTraining\ExampleLokiAdminProducts\Component\Grid\GridViewModel"
         context="YireoTraining\ExampleLokiAdminProducts\Component\Grid\GridContext"
-        repository="Yireo\LokiAdminComponents\Component\Grid\GridRepository">
+        repository="Loki\AdminComponents\Component\Grid\GridRepository">
     </component>
 
     <component
         name="loki_admin_products.form"
         viewModel="YireoTraining\ExampleLokiAdminProducts\Component\Form\FormViewModel"
-        repository="Yireo\LokiAdminComponents\Component\Form\FormRepository">
+        repository="Loki\AdminComponents\Component\Form\FormRepository">
     </component>
 </components>

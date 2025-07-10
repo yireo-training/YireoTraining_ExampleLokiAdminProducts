@@ -1,6 +1,6 @@
 # YireoTraining_ExampleLokiAdminProducts
 
-**This Magento 2 module demos the usage of [Yireo_LokiAdminComponents](https://github.com/yireo/Yireo_LokiAdminComponents) to code a grid with ease.**
+**This Magento 2 module demos the usage of [Loki_AdminComponents](https://github.com/yireo/Loki_AdminComponents) to code a grid with ease.**
 
 ### Installation
 ```bash

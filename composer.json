@@ -1,20 +1,21 @@
 {
-  "name": "yireo-training/magento2-example-loki-admin-products",
-  "version": "0.0.1",
-  "description": "N/A",
-  "type": "magento2-module",
-  "require": {
-    "magento/framework": "*"
-  },
-  "license": [
-    "OSL-3.0"
-  ],
-  "autoload": {
-    "files": [
-      "registration.php"
+    "name": "yireo-training/magento2-example-loki-admin-products",
+    "version": "0.0.1",
+    "description": "N/A",
+    "type": "magento2-module",
+    "require": {
+        "magento/framework": "*",
+        "loki/magento2-admin-components": "0.1.*"
+    },
+    "license": [
+        "OSL-3.0"
     ],
-    "psr-4": {
-      "YireoTraining\\ExampleLokiAdminProducts\\": ""
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "YireoTraining\\ExampleLokiAdminProducts\\": ""
+        }
     }
-  }
 }

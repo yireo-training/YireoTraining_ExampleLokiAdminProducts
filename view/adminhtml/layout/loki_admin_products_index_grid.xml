@@ -10,7 +10,7 @@
         <referenceContainer name="content">
             <block
                 name="loki_admin_products.grid"
-                template="Yireo_LokiAdminComponents::grid.phtml">
+                template="Loki_AdminComponents::grid.phtml">
                 <arguments>
                     <argument name="namespace" xsi:type="string">product_listing</argument>
                     <argument name="provider" xsi:type="string">Magento\Catalog\Api\ProductRepositoryInterface</argument>
