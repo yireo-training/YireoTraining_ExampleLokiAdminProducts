@@ -3,7 +3,7 @@
 namespace YireoTraining\ExampleLokiAdminProducts\Component\Grid;
 
 use Magento\Eav\Model\Config as EavConfig;
-use Yireo\LokiComponents\Component\ComponentContextInterface;
+use Loki\Components\Component\ComponentContextInterface;
 use Magento\Catalog\Model\ProductTypes\ConfigInterface as ProductTypesConfig;
 
 class GridContext implements ComponentContextInterface
