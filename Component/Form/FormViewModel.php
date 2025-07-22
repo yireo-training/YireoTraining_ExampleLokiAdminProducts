@@ -17,17 +17,17 @@ class FormViewModel extends OriginalFormViewModel
         $item = $this->getValue();
         if ($item instanceof DataObject && $item->getId() > 0) {
             return [
-                $this->formActionFactory->createCloseAction(),
-                $this->formActionFactory->createDeleteAction(),
-                $this->formActionFactory->createSaveContinueAction(),
-                $this->formActionFactory->createSaveCloseAction(),
+                $this->buttonFactory->createCloseAction(),
+                $this->buttonFactory->createDeleteAction(),
+                $this->buttonFactory->createSaveContinueAction(),
+                $this->buttonFactory->createSaveCloseAction(),
             ];
         }
 
         return [
-            $this->formActionFactory->createCloseAction(),
-            $this->formActionFactory->createSaveCloseAction(),
-            //$this->formActionFactory->createSaveContinueAction(), // @todo: This looses current changes when creating a new item
+            $this->buttonFactory->createCloseAction(),
+            $this->buttonFactory->createSaveCloseAction(),
+            //$this->buttonFactory->createSaveContinueAction(), // @todo: This looses current changes when creating a new item
         ];
     }
 }
