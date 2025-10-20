@@ -26,7 +26,7 @@
                             </item>
                         </item>
                         <item name="disable" xsi:type="array">
-                            <item name="label" xsi:type="string">Enable</item>
+                            <item name="label" xsi:type="string">Disable</item>
                             <item name="url" xsi:type="string">catalog/product/massStatus</item>
                             <item name="url_parameters" xsi:type="array">
                                 <item name="status" xsi:type="number">0</item>
