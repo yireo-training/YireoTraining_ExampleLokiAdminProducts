@@ -1,11 +1,11 @@
 {
-    "name": "yireo-training\/magento2-example-loki-admin-products",
+    "name": "yireo-training/magento2-example-loki-admin-products",
     "version": "0.0.1",
-    "description": "N\/A",
+    "description": "N/A",
     "type": "magento2-module",
     "require": {
-        "magento\/framework": "*",
-        "loki\/magento2-admin-components": "~0.2"
+        "magento/framework": "*",
+        "loki/magento2-admin-components": "~0.2"
     },
     "license": [
         "OSL-3.0"
