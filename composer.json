@@ -18,5 +18,8 @@
             "YireoTraining\\ExampleLokiAdminProducts\\": ""
         }
     },
-    "keywords": []
+    "keywords": [
+        "loki-components",
+        "loki-example"
+    ]
 }
