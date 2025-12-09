@@ -69,7 +69,7 @@ class GridViewModel extends OriginalGridViewModel
             'id' => $item->getId(),
         ]);
 
-        $cellActions[] = $this->cellActionFactory->create($editUrl, 'Quick Edit');
+        $cellActions[] = $this->cellActionFactory->create('Quick Edit', $editUrl);
 
         return $cellActions;
     }
