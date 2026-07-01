@@ -42,6 +42,10 @@
                         <item name="id_range" xsi:type="array">
                             <item name="label" xsi:type="string">ID</item>
                             <item name="field_type" xsi:type="string">from_to</item>
+                            <item name="default_value" xsi:type="array">
+                                <item name="from" xsi:type="number">0</item>
+                                <item name="to" xsi:type="string"></item>
+                            </item>
                         </item>
                         <item name="store" xsi:type="array">
                             <item name="label" xsi:type="string">Store View</item>
