@@ -5,7 +5,8 @@
     "type": "magento2-module",
     "require": {
         "magento/framework": "*",
-        "loki/magento2-admin-components": "~0.2"
+        "loki/magento2-admin-components": "~0.2",
+        "php": ">=8.2 <8.6"
     },
     "license": [
         "OSL-3.0"
