@@ -7,5 +7,10 @@
         "loki_admin_products.form"
     ],
     "config": [],
-    "tests": []
+    "tests": [],
+    "module_name": "YireoTraining_ExampleLokiAdminProducts",
+    "composer_name": "yireo-training/magento2-example-loki-admin-products",
+    "sequence": [
+        "Magento_Catalog"
+    ]
 }
