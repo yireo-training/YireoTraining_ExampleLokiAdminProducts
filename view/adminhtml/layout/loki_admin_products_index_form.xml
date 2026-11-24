@@ -3,7 +3,7 @@
     <update handle="loki_admin_components_form"/>
 
     <head>
-        <title>YireoTraining Software Product Form</title>
+        <title>Products (Loki) Quick Edit</title>
     </head>
 
     <body>
@@ -13,67 +13,37 @@
                 template="Loki_AdminComponents::form.phtml">
                 <arguments>
                     <argument name="provider" xsi:type="string">Magento\Catalog\Api\ProductRepositoryInterface</argument>
+                    <argument name="acl_resource" xsi:type="string">YireoTraining_ExampleLokiAdminProducts::form</argument>
+                    <argument name="save_acl_resource" xsi:type="string">Magento_Catalog::products</argument>
+                    <argument name="delete_acl_resource" xsi:type="string">Magento_Catalog::products</argument>
+                    <argument name="fields" xsi:type="array">
+                        <item name="status" xsi:type="array">
+                            <item name="label" xsi:type="string">Enabled</item>
+                            <item name="field_type" xsi:type="string">select</item>
+                            <item name="options" xsi:type="string">Magento\Catalog\Model\Product\Attribute\Source\Status</item>
+                            <item name="required" xsi:type="boolean">true</item>
+                            <item name="sort_order" xsi:type="number">10</item>
+                        </item>
+                        <item name="name" xsi:type="array">
+                            <item name="label" xsi:type="string">Product Name</item>
+                            <item name="field_type" xsi:type="string">input</item>
+                            <item name="required" xsi:type="boolean">true</item>
+                            <item name="sort_order" xsi:type="number">20</item>
+                        </item>
+                        <item name="sku" xsi:type="array">
+                            <item name="label" xsi:type="string">SKU</item>
+                            <item name="field_type" xsi:type="string">input</item>
+                            <item name="required" xsi:type="boolean">true</item>
+                            <item name="sort_order" xsi:type="number">30</item>
+                        </item>
+                        <item name="price" xsi:type="array">
+                            <item name="label" xsi:type="string">Price</item>
+                            <item name="field_type" xsi:type="string">input</item>
+                            <item name="required" xsi:type="boolean">true</item>
+                            <item name="sort_order" xsi:type="number">40</item>
+                        </item>
+                    </argument>
                 </arguments>
-
-                <!--
-                <block
-                    name="loki_admin_products.form.inner" as="inner"
-                    template="Loki_AdminComponents::form/fieldset.phtml">
-                    <arguments>
-                        <argument name="label" xsi:type="string">Basic</argument>
-                    </arguments>
-
-                    <block
-                        name="loki_admin_products.form.status" as="status"
-                        template="Loki_AdminComponents::form/field.phtml">
-                        <arguments>
-                            <argument name="label" xsi:type="string">Enabled</argument>
-                            <argument name="field_type" xsi:type="string">switch</argument>
-                            <argument name="required" xsi:type="boolean">true</argument>
-                        </arguments>
-                    </block>
-
-                    <block
-                        name="loki_admin_products.form.name" as="name"
-                        template="Loki_AdminComponents::form/field.phtml">
-                        <arguments>
-                            <argument name="label" xsi:type="string">Product Name</argument>
-                            <argument name="field_type" xsi:type="string">text</argument>
-                            <argument name="required" xsi:type="boolean">true</argument>
-                        </arguments>
-                    </block>
-
-                    <block
-                        name="loki_admin_products.form.sku" as="sku"
-                        template="Loki_AdminComponents::form/field.phtml">
-                        <arguments>
-                            <argument name="label" xsi:type="string">SKU</argument>
-                            <argument name="field_type" xsi:type="string">text</argument>
-                            <argument name="required" xsi:type="boolean">true</argument>
-                        </arguments>
-                    </block>
-
-                    <block
-                        name="loki_admin_products.form.price" as="price"
-                        template="Loki_AdminComponents::form/field.phtml">
-                        <arguments>
-                            <argument name="label" xsi:type="string">Price</argument>
-                            <argument name="field_type" xsi:type="string">text</argument>
-                            <argument name="required" xsi:type="boolean">true</argument>
-                        </arguments>
-                    </block>
-
-                    <block
-                        name="loki_admin_products.form.tax_class" as="tax_class"
-                        template="Loki_AdminComponents::form/field.phtml">
-                        <arguments>
-                            <argument name="label" xsi:type="string">Tax Class</argument>
-                            <argument name="field_type" xsi:type="string">text</argument>
-                            <argument name="required" xsi:type="boolean">true</argument>
-                        </arguments>
-                    </block>
-                </block>
-                -->
             </block>
         </referenceContainer>
     </body>

@@ -10,6 +10,6 @@
     <component
         name="loki_admin_products.form"
         viewModel="YireoTraining\ExampleLokiAdminProducts\Component\Form\FormViewModel"
-        repository="Loki\AdminComponents\Component\Form\FormRepository">
+        repository="YireoTraining\ExampleLokiAdminProducts\Component\Form\FormRepository">
     </component>
 </components>
