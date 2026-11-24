@@ -1,6 +1,8 @@
 {
     "modules": [
-        "Magento_Catalog"
+        "Magento_Catalog",
+        "Loki_Components",
+        "Loki_AdminComponents"
     ],
     "components": [
         "loki_admin_products.grid",
@@ -11,6 +13,10 @@
     "module_name": "YireoTraining_ExampleLokiAdminProducts",
     "composer_name": "yireo-training/magento2-example-loki-admin-products",
     "sequence": [
-        "Magento_Catalog"
-    ]
+        "Magento_Catalog",
+        "Loki_Components",
+        "Loki_AdminComponents"
+    ],
+    "phpcs_severity": "6",
+    "phpstan_level": "1"
 }
