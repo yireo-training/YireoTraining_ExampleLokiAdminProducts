@@ -5,55 +5,36 @@ namespace YireoTraining\ExampleLokiAdminProducts\Controller\Adminhtml\Index;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\Model\View\Result\Page;
+use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\View\Result\PageFactory as ResultPageFactory;
 
-/**
- * Class Index
- *
- * @package YireoTraining\ExampleLokiAdminProducts\Controller\Index
- */
-class Grid extends Action
+class Grid extends Action implements HttpGetActionInterface
 {
-    /**
-     * ACL resource
-     */
-    const ADMIN_RESOURCE = 'YireoTraining_ExampleLokiAdminProducts::grid';
+    public const ADMIN_RESOURCE = 'YireoTraining_ExampleLokiAdminProducts::grid';
+    public const PRODUCTS_RESOURCE = 'Magento_Catalog::products';
 
-    /**
-     * @var ResultPageFactory
-     */
-    private $resultPageFactory;
-
-
-    /**
-     * @param Context $context
-     * @param ResultPageFactory $resultPageFactory
-     */
     public function __construct(
         Context $context,
-        ResultPageFactory $resultPageFactory,
+        private readonly ResultPageFactory $resultPageFactory,
     ) {
         parent::__construct($context);
-
-        $this->resultPageFactory = $resultPageFactory;
     }
 
-    /**
-     * Index action
-     *
-     * @return Page
-     * @throws \Exception
-     */
     public function execute(): Page
     {
-        $title = 'Loki Product Manager';
+        $title = __('Loki Product Manager');
 
         /** @var Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('YireoTraining_ExampleLokiAdminProducts::index');
-        $resultPage->addBreadcrumb(__($title), __($title));
-        $resultPage->getConfig()->getTitle()->prepend(__($title));
+        $resultPage->addBreadcrumb($title, $title);
+        $resultPage->getConfig()->getTitle()->prepend($title);
 
         return $resultPage;
+    }
+
+    protected function _isAllowed(): bool
+    {
+        return parent::_isAllowed() && $this->_authorization->isAllowed(self::PRODUCTS_RESOURCE);
     }
 }

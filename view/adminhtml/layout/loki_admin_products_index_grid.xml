@@ -3,7 +3,7 @@
     <update handle="loki_admin_components_grid"/>
 
     <head>
-        <title>YireoTraining Software Product</title>
+        <title>Products (Loki)</title>
     </head>
 
     <body>
@@ -16,6 +16,8 @@
                     <argument name="provider" xsi:type="string">Magento\Catalog\Api\ProductRepositoryInterface</argument>
                     <argument name="skip_queue" xsi:type="boolean">true</argument>
                     <argument name="acl_resource" xsi:type="string">YireoTraining_ExampleLokiAdminProducts::grid</argument>
+                    <argument name="save_acl_resource" xsi:type="string">Magento_Catalog::products</argument>
+                    <argument name="delete_acl_resource" xsi:type="string">Magento_Catalog::products</argument>
                     <argument name="index_url" xsi:type="string">loki_admin_products/index/grid</argument>
                     <argument name="new_url" xsi:type="string">catalog/product/new</argument>
 
@@ -23,6 +25,7 @@
                         <item name="enable" xsi:type="array">
                             <item name="label" xsi:type="string">Enable</item>
                             <item name="url" xsi:type="string">catalog/product/massStatus</item>
+                            <item name="acl_resource" xsi:type="string">Magento_Catalog::products</item>
                             <item name="url_parameters" xsi:type="array">
                                 <item name="status" xsi:type="number">1</item>
                             </item>
@@ -30,6 +33,7 @@
                         <item name="disable" xsi:type="array">
                             <item name="label" xsi:type="string">Disable</item>
                             <item name="url" xsi:type="string">catalog/product/massStatus</item>
+                            <item name="acl_resource" xsi:type="string">Magento_Catalog::products</item>
                             <item name="url_parameters" xsi:type="array">
                                 <item name="status" xsi:type="number">0</item>
                             </item>
@@ -37,6 +41,7 @@
                         <item name="delete" xsi:type="array">
                             <item name="label" xsi:type="string">Delete</item>
                             <item name="url" xsi:type="string">catalog/product/massDelete</item>
+                            <item name="acl_resource" xsi:type="string">Magento_Catalog::products</item>
                         </item>
                     </argument>
 
