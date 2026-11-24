@@ -13,7 +13,9 @@
     "module_name": "YireoTraining_ExampleLokiAdminProducts",
     "composer_name": "yireo-training/magento2-example-loki-admin-products",
     "sequence": [
+        "Magento_Backend",
         "Magento_Catalog",
+        "Magento_Eav",
         "Loki_Components",
         "Loki_AdminComponents"
     ],
