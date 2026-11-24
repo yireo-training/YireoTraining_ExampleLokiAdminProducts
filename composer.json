@@ -6,7 +6,11 @@
     "require": {
         "magento/framework": "*",
         "loki/magento2-admin-components": "~0.2",
-        "php": ">=8.2 <8.6"
+        "php": ">=8.2 <8.6",
+        "loki/magento2-components": "^2.10",
+        "magento/module-backend": "^102.0",
+        "magento/module-catalog": "^104.0",
+        "magento/module-eav": "^102.1"
     },
     "license": [
         "OSL-3.0"
