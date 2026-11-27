@@ -1,24 +1,57 @@
 {
     "modules": [
-        "Magento_Catalog",
+        "Loki_AdminComponents",
+        "Loki_Base",
         "Loki_Components",
-        "Loki_AdminComponents"
+        "Loki_CssUtils",
+        "Magento_AdminNotification",
+        "Magento_Backend",
+        "Magento_Catalog",
+        "Magento_Cms",
+        "Magento_Config",
+        "Magento_Csp",
+        "Magento_Customer",
+        "Magento_Directory",
+        "Magento_Eav",
+        "Magento_Indexer",
+        "Magento_MediaGalleryUiApi",
+        "Magento_Payment",
+        "Magento_Quote",
+        "Magento_Rule",
+        "Magento_Sales",
+        "Magento_SalesSequence",
+        "Magento_Store",
+        "Magento_Theme",
+        "Magento_Ui",
+        "Magento_Variable",
+        "Yireo_CspUtilities"
     ],
     "components": [
-        "loki_admin_products.grid",
-        "loki_admin_products.form"
+        "loki_admin_products.form",
+        "loki_admin_products.grid"
     ],
     "config": [],
-    "tests": [],
+    "tests": {
+        "unit": 0,
+        "integration": 12,
+        "functional": 0
+    },
     "module_name": "YireoTraining_ExampleLokiAdminProducts",
     "composer_name": "yireo-training/magento2-example-loki-admin-products",
     "sequence": [
+        "Loki_AdminComponents",
+        "Loki_Components",
         "Magento_Backend",
         "Magento_Catalog",
-        "Magento_Eav",
-        "Loki_Components",
-        "Loki_AdminComponents"
+        "Magento_Eav"
     ],
     "phpcs_severity": "6",
-    "phpstan_level": "1"
+    "phpstan_level": "1",
+    "php_versions": [
+        "8.1",
+        "8.2",
+        "8.3"
+    ],
+    "skip_magento_versions": [],
+    "skip_css_utils": false
 }
